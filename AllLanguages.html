@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="AllLanguagesStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="mainpage.html">
+
+
+</head>
+<body>
+    <div class="vid-container">
+        <video autoplay muted loop id="myVideo" class="yvideo">
+            <source src="" id="bgSourceId" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="account-page">
+    <nav id="navbar">
+        <div class="logo-class"></div>
+        <a href="#" id="logo">Logo</a>
+        <div class="search-container">
+            <div><b> BRAIN TONES </b></div>
+        </div>
+        
+      <div class="navbar-right">
+        <a href="#" class="sign">Dark/Light</a>
+        <a href="#"><i class="fa fa-user-circle-o"></i></a>
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+        <div class="themes-section">
+            <h1>All Languages</h1>
+            <div class="theme-container">
+                <div class="row-1">
+                    <div class="theme">
+                        <a href="musicplayer.html"><img src="telugu.png" alt=""></a>
+                        <h3>Telugu</h3>
+                    </div>
+                    <div class="theme">
+                        <a href="musicplayer.html"><img src="https://i.pinimg.com/564x/7c/75/0f/7c750ff268feb9080867208e022a8dbf.jpg" alt=""></a>
+                        <h3>Hindi</h3>
+                    </div>
+                    <div class="theme">
+                        <a href="musicplayer.html"><img src="https://i.pinimg.com/564x/7c/75/0f/7c750ff268feb9080867208e022a8dbf.jpg" alt=""></a>
+                        <h3>English</h3>
+                    </div>
+                    <div class="theme">
+                        <a href="musicplayer.html"><img src="kannada.png" alt=""></a>
+                        <h3>Kannada</h3>
+                    </div>
+                </div>
+            <div class="row-2">
+                <div class="theme">
+                    <img src="tamil.png" alt="">
+                    <h3>Tamil</h3>
+                </div>
+                <div class="theme">
+                    <img src="malayalam.png" alt="">
+                    <h3>Malayalam</h3>
+                </div>
+                <div class="theme">
+                    <img src="oddia.png" alt="">
+                    <h3>Odia</h3>
+                </div>
+                <div class="theme">
+                    <img src="marati.png" alt="">
+                    <h3>Marathi</h3>
+                </div>
+            </div>
+            </div>
+        </div>
+    <footer>
+      <div class="footclass">
+          <div class="each products">
+              <h4>Top Products</h4>
+              <li><a href="#">Managed Website</a></li>
+              <li><a href="#">Manage Reputation</a></li>
+              <li><a href="#">Power Tools</a></li>
+              <li><a href="#">Marketing Service</a></li>
+          </div>
+          <div class="each newsletter">
+              <h4>Newsletter</h4>
+              <p>You can trust us. we only send promo offers, not a single spam.</p>
+              <div class="gmailcombo">
+                  <input type="gmail" class="gmail" placeholder="Enter Email" />
+                  <button class="button">
+                      Subscribe<span class="arr">&#8594;</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+      <div class="down">
+          <div class="each copy">
+              <p>
+                  Copyright ©2021 All rights reserved | This template is made with
+                  <i class="fa fa-heart-o"></i> by
+                  <a href="#" class="blue">Colorlib</a>
+              </p>
+          </div>
+
+          <div class="each social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-globe"></a>
+              <a href="#" class="fa fa-globe"></a>
+          </div>
+      </div>
+  </footer>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () {
+          scrollFunction();
+        };
+  
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 60 ||
+            document.documentElement.scrollTop > 60
+          ) {
+            document.getElementById("navbar").style.padding = "5px 20px";
+            document.getElementById("logo").style.fontSize = "35px";
+            document.getElementById("navbar").style.boxShadow = "0px 0px 10px 10px rgba(0, 0, 0, 0.04)";
+            document.getElementById("navbar").style.backgroundColor = "rgb(25, 25, 25)";
+            mybutton.style.display = "block";
+          } else {
+            document.getElementById("navbar").style.padding = "30px 20px";
+            document.getElementById("logo").style.fontSize = "37px";
+            document.getElementById("navbar").style.boxShadow = "none";
+            document.getElementById("navbar").style.backgroundColor ="transparent";
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }       
+
+        let videoSrc = localStorage.getItem("bgVid");
+
+        var video = document.getElementById('bgVideoId');
+        var sour = document.getElementById('bgSourceId');
+
+        sour.setAttribute('src', videoSrc);
+
+        video.load();
+        video.play();
+        
+
+
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
